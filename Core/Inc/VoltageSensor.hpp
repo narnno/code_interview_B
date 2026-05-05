@@ -7,9 +7,13 @@
 
 class VoltageSensor{
     public:
-		VoltageSensor();
+        VoltageSensor(uint16_t offset, float gain, AdcPeripheral& adc);
         virtual float getVoltage();
     private:
+        uint16_t offset;
+        float gain;
+        AdcPeripheral& adc;
+
 };
 
 #endif
